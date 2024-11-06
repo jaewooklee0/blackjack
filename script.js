@@ -1,4 +1,8 @@
-let balance = 1000; // Initial balance
+let balance = parseFloat(localStorage.getItem('balance')) || 1000;
+
+function updateBalanceDisplay() {
+  document.getElementById("balance").innerText = `$${balance.toFixed(2)}`;
+}
 
 // Function to add funds in increments of 1000
 function addFunds() {

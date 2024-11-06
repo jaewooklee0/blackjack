@@ -9,7 +9,7 @@ $( document ).ready(function() {
 
 var currentTurn = "player";
 var currentWager = 0;
-var currentChipBalance = localStorage.getItem('blackjackChips') || 500;
+let currentChipBalance = parseFloat(localStorage.getItem('balance')); 
 var gameWinner = "none"; // To be declared at end of game
 var isGameOver = false;
 
@@ -62,7 +62,7 @@ function enableButton(buttonName, event) {
 function updateVisibleChipBalances() {
 	$(".current-wager").text(currentWager);
 	$(".current-chip-balance").text(currentChipBalance);
-	localStorage.setItem('blackjackChips', currentChipBalance);
+	localStorage.setItem('balance', currentChipBalance);
 }
 
 // Update card hand totals displayed to user throughout the game
@@ -151,3 +151,6 @@ $(".reduce-aces-button").click(   // Can only see this if player draws 2 aces, w
 		reduceAcesValue(playerHand);
 		disableButton(splitButton, split);
 }); 
+function goToHome() {
+	window.location.href = 'index.html'; // Navigate to home page
+  }
