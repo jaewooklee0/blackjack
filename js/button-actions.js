@@ -134,9 +134,6 @@ function newGame() {
 	}
 }
 
-function resetGame() {
-	currentWager = 0;
-	currentChipBalance = 500;
-	updateVisibleChipBalances();
-	location.reload();
+function returnhome() {
+	window.location.href = 'index.html';
 }
