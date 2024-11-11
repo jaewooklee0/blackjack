@@ -98,6 +98,8 @@ function doubleDown() {
 		currentWager = currentWager * 2;
 		updateVisibleChipBalances();
 		disableButton(doubleDownButton);
+		hit();
+		currentTurn= "dealer";
 	}
 }
 
