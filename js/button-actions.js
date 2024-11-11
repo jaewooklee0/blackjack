@@ -98,7 +98,7 @@ function doubleDown() {
 		currentWager = currentWager * 2;
 		updateVisibleChipBalances();
 		disableButton(doubleDownButton);
-		dealCard(playerHand, playerGameBoard);  // Deal one card to the player
+		hit(); 
 		stand(); 
 	}
 }
