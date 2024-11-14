@@ -1,4 +1,4 @@
-let bankValue = 1000;
+let bankValue = parseFloat(localStorage.getItem('balance')); ;
 let currentBet = 0;
 let wager = 5;
 let lastWager = 0;
@@ -18,40 +18,14 @@ startGame();
 let wheel = document.getElementsByClassName('wheel')[0];
 let ballTrack = document.getElementsByClassName('ballTrack')[0];
 
-function resetGame(){
-	bankValue = 1000;
-	currentBet = 0;
-	wager = 5;
-	bet = [];
-	numbersBet = [];
-	previousNumbers = [];
-	document.getElementById('betting_board').remove();
-	document.getElementById('notification').remove();
-	buildBettingBoard();
-}
+
 
 function startGame(){
 	buildWheel();
 	buildBettingBoard();
 }
 
-function gameOver(){
-	let notification = document.createElement('div');
-	notification.setAttribute('id', 'notification');
-		let nSpan = document.createElement('span');
-		nSpan.setAttribute('class', 'nSpan');
-		nSpan.innerText = 'Bankrupt';
-		notification.append(nSpan);
 
-		let nBtn = document.createElement('div');
-		nBtn.setAttribute('class', 'nBtn');
-		nBtn.innerText = 'Play again';	
-		nBtn.onclick = function(){
-			resetGame();
-		};
-		notification.append(nBtn);
-	container.prepend(notification);
-}
 
 function buildWheel(){
 	let wheel = document.createElement('div');
