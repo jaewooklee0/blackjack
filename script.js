@@ -16,7 +16,7 @@ function goToBlackjack() {
   window.location.href = 'blackjack.html'; // Navigate to Blackjack page
 }
 function goToRoulette() {
-  window.location.href = 'roll.html'; // Navigate to Blackjack page
+  window.location.href = 'roll.html'; 
 }
 
 // On page load, update balance from localStorage

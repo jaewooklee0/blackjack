@@ -1,4 +1,4 @@
-let bankValue = parseFloat(localStorage.getItem('balance')); ;
+let bankValue = parseFloat(localStorage.getItem('balance'));
 let currentBet = 0;
 let wager = 5;
 let lastWager = 0;
