@@ -16,126 +16,47 @@ html, body{
 	height: 100vh;
 	color: #fff;
 }
-/* Top Bar */
-.navbar-fixed {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 1000;
-	background-color: #212121; /* Dark background for the navbar */
+/* Materialize framework style overrides*/
+.nav-wrapper {
+	background-color: black !important; /* Dark navbar background */
+	text-align: left !important;
+	box-shadow: 0 !important; /* Remove shadow */
   }
   
-  .nav-wrapper {
-	padding: 0 20px;
+  .navbar-fixed {
+	margin-bottom: 25px !important; /* Add margin below navbar */
   }
   
-  .brand-logo {
-	font-size: 2rem;
-	color: #fff;
-	font-weight: bold;
-	margin-top: 5px;
+  .brand-logo { /* Text in nav bar */
+	padding-left: 20px !important; /* Add left padding */
+	font-size: 1.5em !important; /* Increase font size */
   }
   
-  #nav-mobile {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	padding: 0;
-	margin: 0;
+  .rules-nav { /* Icon to toggle rules */
+	padding-right: 20px !important; /* Add right padding */
   }
-  
-  #nav-mobile li {
-	margin-left: 20px;
-  }
-  
-  #nav-mobile li a {
-	color: #fff;
-	font-size: 1rem;
-	padding: 10px 15px;
-	text-decoration: none;
-	border-radius: 4px;
-	transition: background-color 0.3s ease;
-  }
-  
-  #nav-mobile li a:hover {
-	background-color: #424242;
-  }
-  
-  .material-icons {
-	vertical-align: middle;
-	font-size: 1.5rem;
-  }
-  
-  /* Close button styling */
-  #rules-close {
-	background-color: #ff4081;
-	color: white;
-	border: none;
-	padding: 10px 20px;
-	border-radius: 4px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
-  }
-  
-  #rules-close:hover {
-	background-color: #f50057;
-  }
-/* Rules Section */
+/* Rules section hidden at start and can toggle in from above */
 #rules {
-	margin-top: 80px; /* Ensure the rules section is below the navbar */
-	padding: 20px;
-	background-color: #f5f5f5;
+	padding: 30px 20px 20px 20px;
+	/* margin: 20px auto 30px auto; (commented out) */
+	text-align: left;
+	display: none; /* Hidden by default */
+	background: #0F2725; /* Dark background */
+	position: absolute; /* Positioned relative to the screen */
+	top: 55px; /* Positioned below navbar */
+	right: 0;
+	width: 100%; /* Full width */
+	z-index: 99; /* Ensure it sits above other content */
+	font-size: .75em; /* Smaller font size */
   }
   
-  h4 {
-	color: #212121;
-	font-size: 2rem;
-	font-weight: bold;
-	margin-bottom: 20px;
+  #rules button {
+	float: right; /* Button on the right */
+	margin-right: 20px; /* Right margin */
   }
   
-  .row {
-	margin-bottom: 20px;
-  }
-  
-  .col {
-	padding: 15px;
-  }
-  
-  p {
-	font-size: 1rem;
-	line-height: 1.6;
-	color: #424242;
-  }
-  
-  strong {
-	color: #212121;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-	.nav-wrapper {
-	  padding: 0 10px;
-	}
-  
-	#nav-mobile {
-	  display: block;
-	  text-align: center;
-	}
-  
-	#nav-mobile li {
-	  margin-left: 0;
-	  margin-top: 10px;
-	}
-  
-	.col {
-	  padding: 10px;
-	}
-  
-	#rules {
-	  padding: 10px;
-	}
+  #rules h4 {
+	text-align: center; /* Center the heading */
   }
 	
 /*notification*/
