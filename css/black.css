@@ -16,7 +16,128 @@ html, body{
 	height: 100vh;
 	color: #fff;
 }
-
+/* Top Bar */
+.navbar-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: #212121; /* Dark background for the navbar */
+  }
+  
+  .nav-wrapper {
+	padding: 0 20px;
+  }
+  
+  .brand-logo {
+	font-size: 2rem;
+	color: #fff;
+	font-weight: bold;
+	margin-top: 5px;
+  }
+  
+  #nav-mobile {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 0;
+	margin: 0;
+  }
+  
+  #nav-mobile li {
+	margin-left: 20px;
+  }
+  
+  #nav-mobile li a {
+	color: #fff;
+	font-size: 1rem;
+	padding: 10px 15px;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+  }
+  
+  #nav-mobile li a:hover {
+	background-color: #424242;
+  }
+  
+  .material-icons {
+	vertical-align: middle;
+	font-size: 1.5rem;
+  }
+  
+  /* Close button styling */
+  #rules-close {
+	background-color: #ff4081;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  #rules-close:hover {
+	background-color: #f50057;
+  }
+/* Rules Section */
+#rules {
+	margin-top: 80px; /* Ensure the rules section is below the navbar */
+	padding: 20px;
+	background-color: #f5f5f5;
+  }
+  
+  h4 {
+	color: #212121;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+  }
+  
+  .row {
+	margin-bottom: 20px;
+  }
+  
+  .col {
+	padding: 15px;
+  }
+  
+  p {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #424242;
+  }
+  
+  strong {
+	color: #212121;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+	.nav-wrapper {
+	  padding: 0 10px;
+	}
+  
+	#nav-mobile {
+	  display: block;
+	  text-align: center;
+	}
+  
+	#nav-mobile li {
+	  margin-left: 0;
+	  margin-top: 10px;
+	}
+  
+	.col {
+	  padding: 10px;
+	}
+  
+	#rules {
+	  padding: 10px;
+	}
+  }
+	
 /*notification*/
 #notification{
 	position: absolute;

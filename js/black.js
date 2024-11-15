@@ -18,8 +18,10 @@ startGame();
 let wheel = document.getElementsByClassName('wheel')[0];
 let ballTrack = document.getElementsByClassName('ballTrack')[0];
 
-
-
+$("#return-home").click(returnhome);
+function goToHome() {
+	window.location.href = 'index.html'; // Navigate to home page
+  }
 function startGame(){
 	buildWheel();
 	buildBettingBoard();
