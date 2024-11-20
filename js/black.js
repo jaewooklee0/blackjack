@@ -342,7 +342,7 @@ function buildBettingBoard(){
 
 	let chipDeck = document.createElement('div');
 	chipDeck.setAttribute('class', 'chipDeck');
-	let chipValues = [1, 5, 10, 100, 'clear'];
+	let chipValues = [100, 500, 1000, 10000, 'clear'];
 	for(i = 0; i < chipValues.length; i++){
 		let cvi = i;
 		let chipColour = (i == 0)? 'red' : ((i == 1)? 'blue cdChipActive' : ((i == 2)? 'orange' : ((i == 3)? 'gold' : 'clearBet')));
@@ -436,7 +436,7 @@ function setBet(e, n, t, o){
 		for(i = 0; i < bet.length; i++){
 			if(bet[i].numbers == n && bet[i].type == t){
 				bet[i].amt = bet[i].amt + wager;
-				let chipColour = (bet[i].amt < 5)? 'red' : ((bet[i].amt < 10)? 'blue' : ((bet[i].amt < 100)? 'orange' : 'gold'));
+				let chipColour = (bet[i].amt < 500)? 'red' : ((bet[i].amt < 1000)? 'blue' : ((bet[i].amt < 10000)? 'orange' : 'gold'));
 				e.querySelector('.chip').style.cssText = '';
 				e.querySelector('.chip').setAttribute('class', 'chip ' + chipColour);
 				let chipSpan = e.querySelector('.chipSpan');
@@ -460,7 +460,7 @@ function setBet(e, n, t, o){
 		}
 
 		if(!e.querySelector('.chip')){
-			let chipColour = (wager < 5)? 'red' : ((wager < 10)? 'blue' : ((wager < 100)? 'orange' : 'gold'));
+			let chipColour = (wager < 500)? 'red' : ((wager < 1000)? 'blue' : ((wager < 10000)? 'orange' : 'gold'));
 			let chip = document.createElement('div');
 			chip.setAttribute('class', 'chip ' + chipColour);
 			let chipSpan = document.createElement('span');
@@ -555,7 +555,7 @@ function win(winningSpin, winValue, betTotal){
 }
 
 function removeBet(e, n, t, o){
-	wager = (wager == 0)? 100 : wager;
+	wager = (wager == 0)? 10000 : wager;
 	for(i = 0; i < bet.length; i++){
 		if(bet[i].numbers == n && bet[i].type == t){
 			if(bet[i].amt != 0){
@@ -568,7 +568,7 @@ function removeBet(e, n, t, o){
 				if(bet[i].amt == 0){
 					e.querySelector('.chip').style.cssText = 'display:none';
 				}else{
-					let chipColour = (bet[i].amt < 5)? 'red' : ((bet[i].amt < 10)? 'blue' : ((bet[i].amt < 100)? 'orange' : 'gold'));
+					let chipColour = (bet[i].amt < 500)? 'red' : ((bet[i].amt < 1000)? 'blue' : ((bet[i].amt < 10000)? 'orange' : 'gold'));
 					e.querySelector('.chip').setAttribute('class', 'chip ' + chipColour);
 					let chipSpan = e.querySelector('.chipSpan');
 					chipSpan.innerText = bet[i].amt;
