@@ -1,17 +1,45 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<title>Javascript Roulette</title>
-	<meta name="title" content="Javascript Roulette">
-	<meta name="description" content="A fully functioning roulette game made using Javascript and CSS">
-	<meta name="author" content="ozboware">
-	<meta property="og:url" content="/">
-	<meta property="og:title" content="Javascript Roulette">
-	<meta property="og:description" content="A fully functioning roulette game made using Javascript and CSS">
-	<link href="css/black.css" rel="stylesheet" type="text/css">
+    <title>Javascript Roulette</title>
+    <meta name="title" content="Javascript Roulette">
+    <meta name="description" content="A fully functioning roulette game made using Javascript and CSS">
+    <meta name="author" content="ozboware">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="Javascript Roulette">
+    <meta property="og:description" content="A fully functioning roulette game made using Javascript and CSS">
+    <link href="css/black.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	
-	<script src="js/black.js"></script>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <button class="nav-button" onclick="returnHome()">
+            <span class="material-icons">home</span> Home
+        </button>
+        <button class="nav-button" onclick="openHelpMenu()">
+            <span class="material-icons">help_outline</span> Help
+        </button>
+    </nav>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeHelpMenu()">&times;</span>
+            <h2>Help Menu</h2>
+            <p>Welcome to the Javascript Roulette game! Here's how you can play:</p>
+            <ul>
+                <li>Place your bets on the roulette table.</li>
+                <li>Click the spin button to roll the wheel.</li>
+                <li>Check if you won based on where the ball lands!</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/black.js"></script>
+    <script src="js/navbar.js"></script>
 </body>
+</html>
