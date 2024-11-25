@@ -21,6 +21,7 @@ html, body{
 	height: 100vh;
 	color: #fff;
 	border: none; /* Ensure no border exists */
+	margin-top: -50px;
 }
 
 
