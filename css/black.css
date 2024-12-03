@@ -17,7 +17,7 @@ html, body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #016D29;
+	background-color: #1b1e26;
 	height: 100vh;
 	color: #fff;
 	border: none; /* Ensure no border exists */
@@ -64,7 +64,7 @@ html, body {
 }
 
 .nav-button:hover {
-    background-color: #555;
+    background-color: #000;
 }
 
 .material-icons {
