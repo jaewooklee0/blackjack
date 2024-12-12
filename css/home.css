@@ -120,7 +120,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
   
   .game-card:hover {
@@ -128,13 +128,15 @@
   }
   
   .game-image {
-    width: 100px; /* Adjust size as needed */
-    height: auto;
-    margin-bottom: 10px;
+    max-width: 80%; /* Image takes up to 80% of the card's width */
+    max-height: 60%; /* Ensures image height fits within the card */
+    object-fit: contain; /* Ensures the image scales proportionally */
+    margin-bottom: 10px; /* Adds space between the image and text */
   }
   
   .game-card span {
     margin-top: auto;
+    font-size: 1.2rem;
   }
   
   
